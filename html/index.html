@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EneSec - Página inicial</title>
+
+    <!-- CSS da Barra do Governo no topo da página -->
+    <link rel="stylesheet" href="css/barra_do_governo.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+  </head>
+
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Barra do Governo no topo da página -->
+    <div id="barra-brasil">
+      <div id="wrapper-barra-brasil">
+        <div class="brasil-flag">
+          <a href="http://brasil.gov.br" class="link-barra">Brasil</a>
+        </div>
+        <span class="acesso-info">
+         <a href="http://www.servicos.gov.br/?pk_campaign=barrabrasil" class="link-barra" id="barra-brasil-orgao">Serviços</a>
+        </span>
+        <nav>
+          <ul class="list">
+            <li><a href="#" id="menu-icon"></a></li>
+            <li class="list-item first"><a href="http://brasil.gov.br/barra#participe" class="link-barra">Participe</a></li>
+            <li class="list-item"><a href="http://brasil.gov.br/barra#acesso-informacao" class="link-barra">Acesso à informação</a></li>
+            <li class="list-item"><a href="http://www.planalto.gov.br/legislacao" class="link-barra">Legislação</a></li>
+            <li class="list-item last last-item"><a href="http://brasil.gov.br/barra#orgaos-atuacao-canais" class="link-barra">Canais</a></li>
+          </ul>
+        </nav>
+        <a class="logo-vlibras" href="http://www.vlibras.gov.br/" aria-label="Acessível em Libras"></a>
+      </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom" role="navigation" style = "background-color: #FFFFFF; text-align: right">
+      <div class="container-fluid">
+        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" style="color: #337ab7">
+            Menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#about">Sobre</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#contact">Contato</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#map">Localização</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+
+      <br>
+
+      <div style = "background-color: #FFFFFF; text-align: right">
+        <form action="index.php" method="POST" class="form-inline">
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail2" name="Email" placeholder="e-mail">
+          </div>
+    
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword2" name="Senha" placeholder="senha">
+          </div>
+    
+          <input type="submit" class="btn btn-info" value="Entrar">
+          <button type="button" class="btn btn-link" onclick="cadastro()">Cadastre-se</button>
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#RecSenha">Esqueci a senha</button>
+        </form>
+      </div>
+    
+      <div class="container">
+        <div class="modal fade" id ="RecSenha">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-info" style="text-align: center"> Recuperação de senha </h4>
+              </div>
+              
+              <div class="modal-body text-info" style="text-align: left;">
+                <form action="recuperarsenha.php" name="recuperaform" method="post" action="">
+                  <label>Digite seu email</label> <br> <input class="form-control" type="email" name="emailrecupera" id="Email">
+                  <input type="hidden" name="acao" value="recuperar">
+
+                  <br>
+
+                  <input class="btn btn-success" type="submit" value="Recuperar">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- /.container -->
+    </nav>
+
+
+    <!-- Intro Header -->
+    <header class="intro">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>O que é o EneSec?</h2>
+
+          <p>O EneSec é uma ferramenta criada para facilitar o acesso a serviços do Departamento de Engenharia Elétrica.</p>
+
+          <p>Agora, alunos e professores podem solicitar documentos com mais praticidade, podendo fazer isso até mesmo pelo celular!</p>
+
+          <p>Cadastre-se e comece já a utilizar nossos serviços.</p>
+        </div>
+      </div>
+    </section>
+
+    <br><br><br><br><br><br><br><br>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center download-section">
+      <div>
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2>Fale conosco!</h2>
+
+          <p>Caso precise de um atendimento, ligue ou mande um e-mail e falaremos com você</p>
+
+          <p>Fone: 61 3107-5580</p>
+
+          <p><a href="mailto:secene@ene.unb.br" class="btn btn-link"><strong><font size="5">secene@ene.unb.br</font></strong></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div id="footer-brasil">
+        <div id="wrapper-footer-brasil">
+          <a href="http://www.acessoainformacao.gov.br/"><span class="logo-acesso-footer"></span></a>
+          <a href="http://www.brasil.gov.br/"><span class="logo-brasil-footer"></span></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
+
+    <script>
+      function cadastro() {
+        window.location.replace("selecao_de_cadastro.html");
+      }
+    </script>
+
+  </body>
+</html>
+
